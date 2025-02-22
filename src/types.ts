@@ -1,3 +1,5 @@
+import { FormEvent } from "react";
+
 export interface ICity {
   cityName: string;
   country: string;
@@ -32,4 +34,10 @@ export interface Country {
 
 export interface CountryItemProps {
   country: Country;
+}
+
+export interface ButtonProps {
+  onClick?: (e:FormEvent) => void;
+  children: React.ReactNode;
+  type: 'primary' | 'back';
 }
