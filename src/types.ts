@@ -1,4 +1,4 @@
-export interface City {
+export interface ICity {
   cityName: string;
   country: string;
   emoji: string;
@@ -14,12 +14,12 @@ export interface Position {
 }
 
 export interface CityListProps {
-  cities: City[];
+  cities: ICity[];
   isLoading: boolean;
 }
 
 export interface CityItemProps {
-  city: City;
+  city: ICity;
 }
 
 export interface CountriesListProps extends CityListProps {}

@@ -7,13 +7,14 @@ import Pricing from './pages/Pricing';
 import PageNotFound from './pages/PageNotFound';
 import CityList from './components/CityList';
 import { useEffect, useState } from 'react';
-import { City } from './types';
+import { ICity } from './types';
 import CountryList from './components/CountryList';
+import City from './components/City';
 
 const BASE_URL = 'http://localhost:9000';
 
 function App() {
-  const [cities, setCities] = useState<City[]>([]);
+  const [cities, setCities] = useState<ICity[]>([]);
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(function () {
@@ -48,6 +49,7 @@ function App() {
             path="cities"
             element={<CityList cities={cities} isLoading={isLoading} />}
           ></Route>
+          <Route path="cities/:id" element={<City />}></Route>
           <Route
             path="countries"
             element={<CountryList cities={cities} isLoading={isLoading} />}
