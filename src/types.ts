@@ -13,7 +13,6 @@ export interface Position {
   lng: number;
 }
 
-
 export interface CityListProps {
   cities: City[];
   isLoading: boolean;
@@ -21,4 +20,16 @@ export interface CityListProps {
 
 export interface CityItemProps {
   city: City;
+}
+
+export interface CountriesListProps extends CityListProps {}
+
+export interface Country {
+  emoji: string;
+  country: string;
+  id: string;
+}
+
+export interface CountryItemProps {
+  country: Country;
 }
