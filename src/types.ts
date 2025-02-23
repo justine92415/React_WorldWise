@@ -45,4 +45,6 @@ export interface ButtonProps {
 export interface CitiesContextType {
   cities: ICity[];
   isLoading: boolean;
+  currentCity: ICity;
+  getCity: (id: string) => Promise<void>;
 }
