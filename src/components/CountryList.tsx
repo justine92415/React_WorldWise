@@ -1,11 +1,13 @@
-import { CountriesListProps, Country } from '../types';
-import CityItem from './CityItem';
+import { useCities } from '../contexts/CitiesContext';
+import { Country } from '../types';
 import CountryItem from './CountryItem';
 import styles from './CountryList.module.css';
 import Message from './Message';
 import Spinner from './Spinner';
 
-function CountryList({ cities, isLoading }: CountriesListProps) {
+function CountryList() {
+  const { cities, isLoading } = useCities();
+
   if (isLoading) return <Spinner />;
 
   if (!cities.length)

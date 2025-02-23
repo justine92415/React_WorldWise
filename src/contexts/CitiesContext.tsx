@@ -1,4 +1,4 @@
-import { createContext, useEffect, useState } from 'react';
+import { createContext, useContext, useEffect, useState } from 'react';
 import { CitiesContextType, ICity } from '../types';
 const BASE_URL = 'http://localhost:9000';
 
@@ -36,4 +36,12 @@ function CitiesProvider({ children }: { children: React.ReactNode }) {
   );
 }
 
-export { CitiesProvider };
+function useCities() {
+  const context = useContext(CitiesContext);
+  if (context === null) {
+    throw new Error('useCities must be used within a CitiesProvider');
+  }
+  return context;
+}
+
+export { CitiesProvider, useCities };
