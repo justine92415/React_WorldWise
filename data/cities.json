@@ -10,7 +10,7 @@
         "lat": 38.727881642324164,
         "lng": -9.140900099907554
       },
-      "id": 73930385
+      "id": "73930385"
     },
     {
       "cityName": "Madrid",
@@ -22,7 +22,7 @@
         "lat": 40.46635901755316,
         "lng": -3.7133789062500004
       },
-      "id": 17806751
+      "id": "17806751"
     },
     {
       "cityName": "Berlin",
@@ -34,7 +34,79 @@
         "lat": 52.53586782505711,
         "lng": 13.376933665713324
       },
-      "id": 98443197
+      "id": "98443197"
+    },
+    {
+      "id": "4e9a",
+      "cityName": "Fuenlabrada de los Montes",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2025-02-23T08:50:06.229Z",
+      "notes": "",
+      "position": {
+        "lat": 39.19820534889482,
+        "lng": -4.899902343750001
+      }
+    },
+    {
+      "id": "7952",
+      "cityName": "Fontrabiouse",
+      "country": "France",
+      "emoji": "🇫🇷",
+      "date": "2025-02-23T08:52:47.206Z",
+      "notes": "",
+      "position": {
+        "lat": 42.65012181368025,
+        "lng": 2.0434570312500004
+      }
+    },
+    {
+      "id": "2faa",
+      "cityName": "Alcantud",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2025-02-23T08:55:07.731Z",
+      "notes": "",
+      "position": {
+        "lat": 40.51379915504413,
+        "lng": -2.3510742187500004
+      }
+    },
+    {
+      "id": "7c85",
+      "cityName": "Alcantud",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2025-02-23T08:55:07.731Z",
+      "notes": "",
+      "position": {
+        "lat": 40.51379915504413,
+        "lng": -2.3510742187500004
+      }
+    },
+    {
+      "id": "3152",
+      "cityName": "Alcantud",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2025-02-23T08:55:07.731Z",
+      "notes": "",
+      "position": {
+        "lat": 40.51379915504413,
+        "lng": -2.3510742187500004
+      }
+    },
+    {
+      "id": "6e57",
+      "cityName": "Magallon",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2025-02-23T08:56:48.523Z",
+      "notes": "QQ",
+      "position": {
+        "lat": 41.83682786072714,
+        "lng": -1.4282226562500002
+      }
     }
   ]
 }

@@ -1,5 +1,5 @@
 import { createContext, useContext, useEffect, useState } from 'react';
-import { CitiesContextType, ICity } from '../types';
+import { CitiesContextType, ICity, NewCity } from '../types';
 const BASE_URL = 'http://localhost:9000';
 
 const CitiesContext = createContext<CitiesContextType | null>(null);
@@ -34,7 +34,26 @@ function CitiesProvider({ children }: { children: React.ReactNode }) {
     } catch {
       alert('There was an error loading data...');
     } finally {
-      setIsLoading(false); 
+      setIsLoading(false);
+    }
+  }
+
+  async function createCity(newCity: NewCity) {
+    try {
+      setIsLoading(true);
+      const res = await fetch(`${BASE_URL}/cities/`, {
+        method: 'POST',
+        body: JSON.stringify(newCity),
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+      const data = await res.json();
+      setCities((cities) => [...cities, data]);
+    } catch {
+      alert('There was an error loading data...');
+    } finally {
+      setIsLoading(false);
     }
   }
 
@@ -45,6 +64,7 @@ function CitiesProvider({ children }: { children: React.ReactNode }) {
         isLoading,
         currentCity,
         getCity,
+        createCity,
       }}
     >
       {children}
