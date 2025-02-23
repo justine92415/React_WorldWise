@@ -46,9 +46,31 @@ export interface CitiesContextType {
   cities: ICity[];
   isLoading: boolean;
   currentCity: ICity;
+  error: string;
   getCity: (id: string) => Promise<void>;
   createCity: (newCity: NewCity) => Promise<void>;
   deleteCity: (id: string) => Promise<void>;
 }
 
 export interface NewCity extends Omit<ICity, 'id'> {}
+
+export interface CitiesReducerState {
+  cities?: ICity[];
+  isLoading?: boolean;
+  currentCity?: ICity;
+  error: '';
+}
+
+export interface CitiesReducerAction {
+  type: ActionType;
+  payload?: any;
+}
+
+export enum ActionType {
+  LOADING = 'loading',
+  CITIES_LOADED = 'cities/loaded',
+  CITY_LOADED = 'city/loaded',
+  CITY_CREATED = 'city/created',
+  CITY_DELETED = 'city/deleted',
+  REJECT = 'reject',
+}
