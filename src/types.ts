@@ -39,7 +39,7 @@ export interface CountryItemProps {
 export interface ButtonProps {
   onClick?: (e:FormEvent) => void;
   children: React.ReactNode;
-  type: 'primary' | 'back';
+  type: 'primary' | 'back' | 'position';
 }
 
 export interface CitiesContextType {
