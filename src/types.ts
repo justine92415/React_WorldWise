@@ -82,6 +82,7 @@ export interface AuthContextType {
   user: any;
   login: (email: string, password: string) => void;
   logout: () => void;
+  isAuthenticated: boolean;
 }
 
 export interface AuthContextReducerState {

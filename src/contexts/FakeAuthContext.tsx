@@ -55,6 +55,7 @@ function AuthProvider({ children }: { children: React.ReactNode }) {
     <AuthContext.Provider
       value={{
         user,
+        isAuthenticated: isAuthenticated!,
         login,
         logout,
       }}
@@ -69,6 +70,7 @@ function useAuth() {
   if (context === undefined) {
     throw new Error('useAuth must be used within an AuthProvider');
   }
+  return context;
 }
 
 export { AuthProvider, useAuth };
