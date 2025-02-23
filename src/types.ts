@@ -41,3 +41,8 @@ export interface ButtonProps {
   children: React.ReactNode;
   type: 'primary' | 'back';
 }
+
+export interface CitiesContextType {
+  cities: ICity[];
+  isLoading: boolean;
+}
