@@ -4,7 +4,7 @@ export interface ICity {
   cityName: string;
   country: string;
   emoji: string;
-  date: string | Date;
+  date: string;
   notes: string;
   position: Position;
   id: string;
@@ -48,6 +48,7 @@ export interface CitiesContextType {
   currentCity: ICity;
   getCity: (id: string) => Promise<void>;
   createCity: (newCity: NewCity) => Promise<void>;
+  deleteCity: (id: string) => Promise<void>;
 }
 
 export interface NewCity extends Omit<ICity, 'id'> {}

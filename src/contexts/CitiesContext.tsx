@@ -57,6 +57,20 @@ function CitiesProvider({ children }: { children: React.ReactNode }) {
     }
   }
 
+  async function deleteCity(id: string) {
+    try {
+      setIsLoading(true);
+      const res = await fetch(`${BASE_URL}/cities/${id}`, {
+        method: 'DELETE',
+      });
+      setCities((cities) => cities.filter((city) => city.id !== id));
+    } catch {
+      alert('There was an error loading data...');
+    } finally {
+      setIsLoading(false);
+    }
+  }
+
   return (
     <CitiesContext.Provider
       value={{
@@ -65,6 +79,7 @@ function CitiesProvider({ children }: { children: React.ReactNode }) {
         currentCity,
         getCity,
         createCity,
+        deleteCity
       }}
     >
       {children}
