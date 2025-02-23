@@ -2,7 +2,7 @@ import { createContext, useContext, useEffect, useReducer } from 'react';
 import {
   ActionType,
   CitiesContextType,
-  CitiesReducerAction,
+  ReducerAction,
   CitiesReducerState,
   ICity,
   NewCity,
@@ -20,7 +20,7 @@ const initialState: CitiesReducerState = {
 
 function reducer(
   state: CitiesReducerState,
-  action: CitiesReducerAction
+  action: ReducerAction
 ): CitiesReducerState {
   switch (action.type) {
     case ActionType.LOADING:

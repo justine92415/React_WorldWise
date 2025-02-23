@@ -61,7 +61,7 @@ export interface CitiesReducerState {
   error: '';
 }
 
-export interface CitiesReducerAction {
+export interface ReducerAction {
   type: ActionType;
   payload?: any;
 }
@@ -73,4 +73,18 @@ export enum ActionType {
   CITY_CREATED = 'city/created',
   CITY_DELETED = 'city/deleted',
   REJECT = 'reject',
+
+  LOGIN = 'login',
+  LOGOUT = 'logout',
+}
+
+export interface AuthContextType {
+  user: any;
+  login: (email: string, password: string) => void;
+  logout: () => void;
+}
+
+export interface AuthContextReducerState {
+  user?: any;
+  isAuthenticated?: boolean;
 }
