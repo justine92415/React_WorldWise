@@ -23,7 +23,7 @@ function City() {
     function () {
       getCity(id!);
     },
-    [id]
+    [id, getCity]
   );
 
   const { cityName, date, notes, emoji } = currentCity as ICity;
@@ -65,7 +65,6 @@ function City() {
       <div>
         <BackButton />
       </div>
-
     </div>
   );
 }
