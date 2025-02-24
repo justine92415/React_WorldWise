@@ -1,4 +1,4 @@
-import { FormEvent, useContext, useEffect, useState } from 'react';
+import { FormEvent, useEffect, useState } from 'react';
 
 import styles from './Form.module.css';
 import Button from './Button';
@@ -78,7 +78,7 @@ function Form() {
       cityName,
       country,
       emoji,
-      date,
+      date: date.toDateString(),
       notes,
       position: { lat: +lat!, lng: +lng! },
     };

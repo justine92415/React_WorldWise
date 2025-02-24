@@ -120,7 +120,7 @@ function CitiesProvider({ children }: { children: React.ReactNode }) {
   async function deleteCity(id: string) {
     try {
       dispatch({ type: ActionType.LOADING });
-      const res = await fetch(`${BASE_URL}/cities/${id}`, {
+      await fetch(`${BASE_URL}/cities/${id}`, {
         method: 'DELETE',
       });
       dispatch({ type: ActionType.CITY_DELETED, payload: id });
